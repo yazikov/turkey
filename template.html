@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <?php
+        if (isset($text)) {
+            print '<meta name="Description" content="'.$text->getTitle().'">';
+            print '<meta name="Keywords" content="'.$text->getMetaTag().'">';
+        } else if (isset($house)) {
+            print '<meta name="Description" content="'.$house->getTitle().'">';
+            print '<meta name="Keywords" content="'.$house->getMetaTag().'">';
+        }
+    ?>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" type="text/css" href="http://www.gismeteo.ru/static/css/informer2/gs_informerClient.min.css">
+
+    <link href="http://static.tu-tu.ru/css2/promo/tutu-mform.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="fancybox/jquery.fancybox.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+    <!-- Add Button helper (this is optional) -->
+    <link rel="stylesheet" type="text/css" href="fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+    <script type="text/javascript" src="fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+    <!-- Add Thumbnail helper (this is optional) -->
+    <link rel="stylesheet" type="text/css" href="fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+    <script type="text/javascript" src="fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+    <!-- Add Media helper (this is optional) -->
+    <script type="text/javascript" src="fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+    <script src="js/main.js"></script>
+
+    <title></title>
+</head>
+<body>
+
+    <div class="main">
+        <div class="header">
+            <div class="logo">
+
+            </div>
+            <div class="menu_wrapper">
+                <?php
+                    $template->buildMenu();
+                ?>
+            </div>
+        </div>
+        <div class="layout">
+            <div class="layout_left">
+                <div class="content">
+                    <div class="widget_title">
+                        ПОИСК
+                    </div>
+                    <div class="content_body">
+                        <?php
+                            $template->buildSearchMenu();
+                         ?>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="widget_title">КУРСЫ ВАЛЮТ</div>
+                    <div class="widget_body">
+                        <!--  START: Topbiz.md Widget HTML 1.0--><script language="JavaScript" type="text/javascript" src="http://xn--2-stbsei.xn--p1ai/b/generateframe2?id=21449"></script><noscript> фунт стерлингов курс покупка <a href="http://xn--2-stbsei.xn--p1ai/"><h1>курс валют</h1></a>курс доллара в банках москвы онлайн <a href="http://xn--2-stbsei.xn--p1ai/informer"><h1>информер курса валют</h1></a>курс гривны к доллару сша калькулятор <a href="http://xn--2-stbsei.xn--p1ai/" target="_blank"><h1>евро к доллару курс </h1></a>курс валют ЦБ<a target="_blank" href="http://cursvalutar.topbiz.md/"><h1>curs valutar</h1></a><a href="http://amevita.md/mobila-la-comanda" target="_blank"><h1>mobila la comanda</h1></a></noscript><!--  END: topbiz.md Widget HTML 1.0-->
+                    </div>
+                </div>
+            </div>
+            <div class="layout_right">
+                <div class="content">
+                    <div class="widget_title">
+                        ПОГОДА В ТУРЦИИ
+                    </div>
+                    <div class="widget_body">
+                        <!-- Gismeteo informer START -->
+                        <div id="gsInformerID-1SanA4PDo2LMLR" class="gsInformer" style="width:200px;height:148px">
+                            <div class="gsIContent">
+                                <div class="gsLinks">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <div class="leftCol">
+                                                    <a href="http://www.gismeteo.ru" target="_blank">
+                                                        <img alt="Gismeteo" title="Gismeteo" src="http://www.gismeteo.ru/static/images/informer2/logo-mini2.png" align="absmiddle" border="0" />
+                                                        <span>Gismeteo</span>
+                                                    </a>
+                                                </div>
+                                                <div class="rightCol">
+                                                    <a href="http://www.gismeteo.ru" target="_blank">Прогноз на 2 недели</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <script src="http://www.gismeteo.ru/ajax/getInformer/?hash=1SanA4PDo2LMLR" type="text/javascript"></script>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="widget_title">
+                        ПОГОДА В ЧЕРНОГОРИИ
+                    </div>
+                    <div class="widget_body">
+                        <div id="gsInformerID-352o1VQCOM6LwK" class="gsInformer" style="width:205px;height:174px">
+                            <div class="gsIContent">
+                                <div class="gsLinks">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <div class="leftCol">
+                                                    <a href="http://www.gismeteo.ru" target="_blank">
+                                                        <img alt="Gismeteo" title="Gismeteo" src="http://www.gismeteo.ru/static/images/informer2/logo-mini2.png" align="absmiddle" border="0" />
+                                                        <span>Gismeteo</span>
+                                                    </a>
+                                                </div>
+                                                <div class="rightCol">
+                                                    <a href="http://www.gismeteo.ru" target="_blank">Прогноз на 2 недели</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <script src="http://www.gismeteo.ru/ajax/getInformer/?hash=352o1VQCOM6LwK" type="text/javascript"></script>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="widget_title">БИЛЕТЫ</div>
+                    <div class="widget_body">
+                        <!-- начало формы поиска -->
+
+                        <div class="b-mform st-avia" id="tutuMForm">
+                            <div class="mform-header"><a href="http://tutu.ru" class="mform-logo"></a></div>
+                            <div class="mform-gradient"></div>
+                            <div class="mform-menu-wrap">
+                                <ul class="mform-menu">
+                                    <li class="mform-tab tab-avia" onclick="tutuMFormClick('avia')">
+                                        <span class="mform-tabtext">Авиа</span>
+                                    </li>
+                                    <li class="mform-tab tab-train" onclick="tutuMFormClick('train')">
+                                        <span class="mform-tabtext">Поезда</span>
+                                    </li>
+                                    <li class="mform-tab tab-hotels" onclick="tutuMFormClick('hotels')">
+                                        <span class="mform-tabtext">Отели</span>
+                                    </li>
+                                    <li class="mform-tab tab-etrain" onclick="tutuMFormClick('etrain')">
+                                        <span class="mform-tabtext">Электрички</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="mform-forms">
+                                <li class="mform-form_item form-avia">
+                                    <form action="http://avia.tutu.ru/flights/" method="get" target="_blank">
+                                        <input id="tutuMFormAviaFrom" type="" class="mform-input" placeholder="Город вылета" name="city_name_from" onfocus="tutuMFormIe(this)" onblur="tutuMFormIeBack(this)" />
+                                        <input id="tutuMFormAviaTo" type="" class="mform-input" placeholder="Город прибытия" name="city_name_to" onfocus="tutuMFormIe(this)" onblur="tutuMFormIeBack(this)" />
+                                        <div class="mform-button-wrap">
+                                            <button class="mform-button" onmousedown="tutuMFormPress(this)" onmouseup="tutuMFormUp(this)" onmouseout="tutuMFormUp(this)"><span class="mform-button_text">Найти авиабилеты</span><span class="mform-button_arrow"></span><span class="mform-button_arrow arrow-bottom"></span></button>
+                                        </div>
+                                    </form>
+                                    <div class="mform-links">
+                                        <a href="http://avia.tutu.ru/">Билеты на самолет</a>
+                                        <a href="http://avia.tutu.ru/airport/">Аэропорты</a>
+                                    </div>
+                                </li>		<li class="mform-form_item form-train">
+                                <form action="http://www.tutu.ru/poezda/search.php" method="get" target="_blank">
+                                    <input id="tutuMFormTrainFrom" type="text" class="mform-input" placeholder="Город отправления" name="st1" onfocus="tutuMFormIe(this)" onblur="tutuMFormIeBack(this)" />
+                                    <input id="tutuMFormTrainTo" type="text" class="mform-input" placeholder="Город прибытия" name="st2" onfocus="tutuMFormIe(this)" onblur="tutuMFormIeBack(this)" />
+                                    <div class="mform-button-wrap">
+                                        <button class="mform-button" onmousedown="tutuMFormPress(this)" onmouseup="tutuMFormUp(this)" onmouseout="tutuMFormUp(this)"><span class="mform-button_text">Найти билеты</span><span class="mform-button_arrow"></span><span class="mform-button_arrow arrow-bottom"></span></button>
+                                    </div>
+                                </form>
+                                <div class="mform-links">
+                                    <a href="http://www.tutu.ru/poezda/">Билеты на поезд</a>
+                                    <a href="http://www.tutu.ru/">Заказ жд билетов</a>
+                                </div>
+                            </li>		<li class="mform-form_item form-hotels">
+                                <form action="http://hotels.tutu.ru/city/$city_id/$city_name/" method="get" target="_blank">
+                                    <input id="tutuMFormHotels" type="text" class="mform-input" placeholder="Город" value="" name="search" onfocus="tutuMFormIe(this)" onblur="tutuMFormIeBack(this)" />
+                                    <div class="mform-button-wrap">
+                                        <button class="mform-button" onmousedown="tutuMFormPress(this)" onmouseup="tutuMFormUp(this)" onmouseout="tutuMFormUp(this)"><span class="mform-button_text">Найти отели</span><span class="mform-button_arrow"></span><span class="mform-button_arrow arrow-bottom"></span></button>
+                                    </div>
+                                </form>
+                                <div class="mform-links">
+                                    <a href="http://hotel.tutu.ru/">Выбор гостиниц на tutu.ru</a>
+                                    <a href="http://hotels.tutu.ru/city/491/moskva/">Гостиницы в Москве</a>
+                                    <a href="http://hotels.tutu.ru/city/75/sankt-peterburg/">Гостиницы в Санкт-Петербурге</a>
+                                </div>
+                            </li>		<li class="mform-form_item form-etrain">
+                                <form action="/prigorod/search.php" method="get" target="_blank">
+                                    <input id="tutuMFormEtrainFrom" type="" class="mform-input" placeholder="Станция отправления" name="st1" onfocus="javascript:tutuMFormIe(this)" onblur="javascript:tutuMFormIeBack(this)" />
+                                    <input id="tutuMFormEtrainTo" type="" class="mform-input" placeholder="Станция прибытия" name="st2" onfocus="javascript:tutuMFormIe(this)" onblur="javascript:tutuMFormIeBack(this)" />
+                                    <input type="hidden" name="fromInformer" />
+                                    <input type="hidden" name="reg_first" value="msk" />								<div class="mform-button-wrap">
+                                    <button class="mform-button" onmousedown="tutuMFormPress(this)" onmouseup="tutuMFormUp(this)" onmouseout="tutuMFormUp(this)"><span class="mform-button_text">Посмотреть расписание</span><span class="mform-button_arrow"></span><span class="mform-button_arrow arrow-bottom"></span></button>
+                                </div>
+                                </form>
+                                <div class="mform-links">
+                                    <a href="http://www.tutu.ru/prigorod/">Расписание электричек</a>
+                                    <a href="http://www.tutu.ru/metro/">Схема метро</a>
+                                </div>
+                            </li>
+                            </ul>
+                        </div>
+                        <script>
+                            var tutuOldIe = (navigator.userAgent.indexOf('MSIE') != -1)&&!(navigator.userAgent.indexOf('MSIE 10') != -1 );
+                            function tutuMFormClick(activeTab){
+                                var newClass = 'b-mform st-' + activeTab;
+                                document.getElementById('tutuMForm').className = newClass;
+                            }
+                            function tutuMFormPress(objButton){
+                                var newClass = 'mform-button st-click';
+                                objButton.className = newClass;
+                            }
+                            function tutuMFormUp(objButton){
+                                var newClass = 'mform-button';
+                                objButton.className = newClass;
+                            }
+                            function tutuMFormIe(objInput){
+                                if (tutuOldIe){
+                                    var placeholder = objInput.getAttribute('placeholder');
+                                    if (objInput.value==placeholder){
+                                        objInput.value='';
+                                    }
+                                }
+                            }
+                            function tutuMFormIeBack(objInput){
+                                if (tutuOldIe){
+                                    var placeholder = objInput.getAttribute('placeholder');
+                                    if ((placeholder !== null) && (objInput.value=='')){
+                                        objInput.value=placeholder;
+                                    }
+                                }
+                            }
+                            function tutuMFormIeInit(){
+                                if (tutuOldIe){
+                                    var input_elems = ['tutuMFormAviaFrom', 'tutuMFormAviaTo',  'tutuMFormHotels', 'tutuMFormTrainFrom', 'tutuMFormTrainTo', 'tutuMFormEtrainFrom', 'tutuMFormEtrainTo'];
+                                    for(i in input_elems) {
+                                        var placeholder = document.getElementById(input_elems[i]).getAttribute('placeholder');
+                                        if (placeholder !== null)
+                                            document.getElementById(input_elems[i]).value = placeholder;
+                                    }
+                                }
+                            }
+                            tutuMFormIeInit();
+                        </script>
+                        <!-- Конец формы поиска -->
+                    </div>
+                </div>
+            </div>
+            <div class="layout_center">
+                <div class="content">
+                    <?php
+                        $template->buildContent();
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

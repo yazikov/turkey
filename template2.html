@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <script type="text/javascript" src="fancybox/jquery.fancybox.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+    <!-- Add Button helper (this is optional) -->
+    <link rel="stylesheet" type="text/css" href="fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+    <script type="text/javascript" src="fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+    <!-- Add Thumbnail helper (this is optional) -->
+    <link rel="stylesheet" type="text/css" href="fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+    <script type="text/javascript" src="fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+    <!-- Add Media helper (this is optional) -->
+    <script type="text/javascript" src="fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+    <script src="js/main.js"></script>
+
+    <title></title>
+</head>
+<body>
+
+    <div class="main">
+        <div class="header">
+            <div class="logo">
+
+            </div>
+            <div class="menu_wrapper">
+                <ul class="nav navbar-nav menu">
+                    <li><a href="#">ГЛАВНАЯ</a></li>
+                    <li><a href="#">КАТАЛОГ</a></li>
+                    <li><a href="#">УСЛУГИ</a></li>
+                    <li><a href="#">СПРАВОЧНЫЕ МАТЕРИАЛЫ</a></li>
+                    <li><a href="#">КОНТАКТЫ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="layout">
+            <div class="layout_left">
+                <div class="content">
+                    <div class="widget_title">
+                        НЕДВИЖИМОСТЬ
+                    </div>
+                    <div class="content_body">
+                        <p><select id="inputType">
+                            <option>Тип объявления</option>
+                            <option>Продажа</option>
+                            <option>Аренда</option>
+                        </select></p>
+                        <p><select id="inputHouseType">
+                            <option>Тип недвижимости</option>
+                            <option>Квартира</option>
+                            <option>Коттедж</option>
+                        </select></p>
+                        <p><select id="inputCostMin">
+                            <option>Минимальная стоимость</option>
+                            <option>от 1000$</option>
+                            <option>от 10000$</option>
+                            <option>от 20000$</option>
+                            <option>от 50000$</option>
+                            <option>от 100000$</option>
+                        </select></p>
+                        <p><select id="inputCostMax">
+                            <option>Максимальная стоимость</option>
+                            <option>до 1000$</option>
+                            <option>до 10000$</option>
+                            <option>до 20000$</option>
+                            <option>до 50000$</option>
+                            <option>до 100000$</option>
+                        </select></p>
+                        <p><select id="inputRoomMin">
+                            <option>Количество комнат</option>
+                            <option>от 1</option>
+                            <option>от 2</option>
+                            <option>от 3</option>
+                            <option>от 4</option>
+                            <option>от 5</option>
+                            <option>от 6</option>
+                            <option>от 7</option>
+                            <option>от 8</option>
+                            <option>от 9</option>
+                            <option>от 10</option>
+                        </select></p>
+                        <p><select id="inputRoomMax">
+                            <option>Количество комнат</option>
+                            <option>до 1</option>
+                            <option>до 2</option>
+                            <option>до 3</option>
+                            <option>до 4</option>
+                            <option>до 5</option>
+                            <option>до 6</option>
+                            <option>до 7</option>
+                            <option>до 8</option>
+                            <option>до 9</option>
+                            <option>до 10</option>
+                        </select></p>
+                        <p><input id="inputParking" type="checkbox" /> Парковка</p>
+                        <p><input id="inputSwimmingPool" type="checkbox" /> Бассейн</p>
+                        <p><input id="inputFurniture" type="checkbox" /> Мебель</p>
+                        <p><input id="inputWasher" type="checkbox" /> Стиральная машина</p>
+                        <p><input id="inputRefrigerator" type="checkbox" /> Холодильник</p>
+                        <p><input id="inputKitchenRange" type="checkbox" /> Кухонная плита</p>
+                        <p><input id="inputMicrowave" type="checkbox" /> Микроволновая печь</p>
+                        <div class="button_left">
+                            <button id="btnSearch" type="button" class="btn btn-default">Найти</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layout_right">
+                <div class="content">
+                    <div class="widget_title">
+                        ПОГОДА В ТУРЦИИ
+                    </div>
+                    <div class="widget_body">
+
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="widget_title">КУРСЫ ВАЛЮТ</div>
+                    <div class="widget_body">
+
+                    </div>
+                </div>
+            </div>
+            <div class="layout_center">
+                <div class="content">
+                    <div class="content_title">
+                        <b>Квартира у моря</b>
+                    </div>
+                    <div class="content_body">
+                        <div class="content_slider">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="active"><a href="#image_tab" role="tab" data-toggle="tab">Изображения</a></li>
+                                <li><a href="#map_tab" role="tab" data-toggle="tab">Карта</a></li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="image_tab">
+                                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <a class="fancybox" href="images/catalog/1/test.jpg" data-fancybox-group="gallery">
+                                                    <img src="images/catalog/1/test.jpg" alt="...">
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <a class="fancybox" href="images/catalog/1/test2.jpg" data-fancybox-group="gallery">
+                                                    <img src="images/catalog/1/test2.jpg" alt="...">
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <a class="fancybox" href="images/catalog/1/test3.jpg" data-fancybox-group="gallery">
+                                                    <img src="images/catalog/1/test3.jpg" alt="...">
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <a class="fancybox" href="images/catalog/1/test4.jpg" data-fancybox-group="gallery">
+                                                    <img src="images/catalog/1/test4.jpg" alt="...">
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <a class="fancybox" href="images/catalog/1/test5.jpg" data-fancybox-group="gallery">
+                                                    <img src="images/catalog/1/test5.jpg" alt="...">
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <a class="fancybox" href="images/catalog/1/test6.jpg" data-fancybox-group="gallery">
+                                                    <img src="images/catalog/1/test6.jpg" alt="...">
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <a class="fancybox" href="images/catalog/1/test7.jpg" data-fancybox-group="gallery">
+                                                    <img src="images/catalog/1/test7.jpg" alt="...">
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <a class="fancybox" href="images/catalog/1/test8.jpg" data-fancybox-group="gallery">
+                                                    <img src="images/catalog/1/test8.jpg" alt="...">
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <a class="fancybox" href="images/catalog/1/test9.jpg" data-fancybox-group="gallery">
+                                                    <img src="images/catalog/1/test9.jpg" alt="...">
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <a class="fancybox" href="images/catalog/1/test10.jpg" data-fancybox-group="gallery">
+                                                    <img src="images/catalog/1/test10.jpg" alt="...">
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <a class="fancybox" href="images/catalog/1/test11.jpg" data-fancybox-group="gallery">
+                                                    <img src="images/catalog/1/test11.jpg" alt="...">
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <a class="fancybox" href="images/catalog/1/test12.jpg" data-fancybox-group="gallery">
+                                                    <img src="images/catalog/1/test12.jpg" alt="...">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Controls -->
+                                        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left"></span>
+                                        </a>
+                                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="map_tab">
+                                    <img src="images/background.jpg" width="300px"/>
+                                </div>
+                            </div>
+                            <!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">-->
+                                <!--<div class="modal-dialog">-->
+                                    <!--<div class="modal-content">-->
+                                        <!--<div class="modal-header">-->
+                                            <!--<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>-->
+                                            <!--<h4 class="modal-title" id="myModalLabel">Modal title</h4>-->
+                                        <!--</div>-->
+                                        <!--<div class="modal-body">-->
+
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        </div>
+                        <div class="content_text">
+                            <b>Общая площадь:</b> 87м<sup>2</sup>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="pag">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#">&laquo;</a>
+                            </li>
+                            <li class="active">
+                                <a href="#">1</a>
+                            </li>
+                            <li>
+                                <a href="#">2</a>
+                            </li>
+                            <li>
+                                <a href="#">&hellip;</a>
+                            </li>
+                            <li>
+                                <a href="#">10</a>
+                            </li>
+                            <li>
+                                <a href="#">11</a>
+                            </li>
+                            <li>
+                                <a href="#">&raquo;</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="separator" ></div>
+                    <div class="content_title">
+                        <b>Квартира у моря</b>
+                    </div>
+                    <div class="content_body">
+                        <div class="content_image">
+                            <img src="images/catalog/1/test.jpg" width="200px"/>
+                        </div>
+                        <div class="content_text">
+                            <b>Общая площадь:</b> 87м<sup>2</sup>
+                        </div>
+                    </div>
+                    <div class="button_right">
+                        <button type="button" class="btn btn-default">Просмотреть</button>
+                    </div>
+                    <div class="separator" ></div>
+                    <div class="content_title">
+                        <b>Квартира у моря</b>
+                    </div>
+                    <div class="content_body">
+                        <div class="content_image">
+                            <img src="images/catalog/1/test.jpg" width="200px"/>
+                        </div>
+                        <div class="content_text">
+                            <b>Общая площадь:</b> 87м<sup>2</sup>
+                        </div>
+                    </div>
+                    <div class="button_right">
+                        <button type="button" class="btn btn-default">Просмотреть</button>
+                    </div>
+                    <div class="separator" ></div>
+                    <div class="pag">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#">&laquo;</a>
+                            </li>
+                            <li class="active">
+                                <a href="#">1</a>
+                            </li>
+                            <li>
+                                <a href="#">2</a>
+                            </li>
+                            <li>
+                                <a href="#">&hellip;</a>
+                            </li>
+                            <li>
+                                <a href="#">10</a>
+                            </li>
+                            <li>
+                                <a href="#">11</a>
+                            </li>
+                            <li>
+                                <a href="#">&raquo;</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

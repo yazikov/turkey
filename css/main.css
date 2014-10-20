@@ -1,0 +1,188 @@
+html, body {
+    background: url("../images/background.jpg") no-repeat fixed center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+}
+
+.content {
+    background-color: white;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    margin: 0 auto 20px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.content_title {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.content_body {
+    color: #000000;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    height: auto;
+    /*min-height: 270px;*/
+}
+
+.content_image {
+    display: block;
+    width: 270px;
+    float: right;
+}
+
+.content_text {
+    width: auto;
+}
+
+.content_slider {
+    float: right;
+    margin: 7px 0 7px 7px; /* Отступы вокруг картинки */
+}
+
+.carousel {
+    text-align: center;
+    width: 240px;
+    height: 160px;
+}
+
+.layout {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.layout_left {
+    padding: 10px;
+    color: white;
+    position:relative;
+    width: 250px;
+    min-height:100%;
+    float:left;
+}
+
+.layout_center {
+    padding: 10px;
+    height: auto !important;
+    margin-right: 270px;
+    margin-left: 270px;
+    min-height: 100%;
+    position: relative;
+}
+
+.layout_right {
+    padding: 10px;
+    position:relative;
+    width: 250px;
+    min-height:100%;
+    height:auto !important;
+    float:right;
+}
+
+.header {
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100px;
+    width: 100%;
+}
+
+.logo {
+    position: absolute;
+    right: 700px;
+    background: url("../images/logo.png") no-repeat;
+    height: 100px;
+    width: 159px;
+}
+
+.navbar-nav.navbar-right:last-child {
+    margin-right: 0;
+}
+
+.menu {
+    background-color: #004a80;
+}
+
+.menu_active {
+    background-color: #003861;
+}
+
+.menu_wrapper {
+    padding-right: 10px;
+    padding-top: 25px;
+    position: absolute;
+    height: 100px;
+    right: 0;
+}
+
+.menu a {
+    color: white;
+}
+
+.menu li a:hover, .menu li a:focus {
+    background-color: #003861;
+}
+
+.widget_title {
+    display: table-cell;
+    height: 70px;
+    min-width: 230px;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    background: #004a80;
+    color: white;
+    font-size: 20px;
+}
+
+.widget_body {
+    width: 100%;
+    text-align: center;
+}
+
+.button_right {
+    width: 100%;
+    text-align: end;
+    padding: 10px;
+}
+
+.button_left {
+    width: 100%;
+    text-align: start;
+    padding: 10px;
+}
+
+.separator {
+    background: #004a80;
+    width: 100%;
+    height: 2px;
+}
+
+.pag {
+    width: 100%;
+    text-align: center;
+}
+
+.gsInformer {
+    margin: 30px auto 0;
+}
+
+.b-mform {
+    margin: 20px auto 0;
+}
+
+.combobox {
+    width: 200px;
+}
