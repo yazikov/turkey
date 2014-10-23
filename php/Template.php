@@ -415,8 +415,12 @@ class Template {
 
         print '<p><select id="inputHouseType" class="combobox">';
         print '<option value="0" selected>Тип недвижимости</option>';
-        print '<option value="1">Квартира</option>';
-        print '<option value="2">Коттедж</option>';
+
+        $house_types = $this->dao->getHouseTypes();
+
+        foreach($house_types as $house_type) {
+            print '<option value="' . $house_type->getId() . '">' . $house_type->getName() . '</option>';
+        }
         print '</select></p>';
 
         print '<p><select id="inputCostMin" class="combobox">';

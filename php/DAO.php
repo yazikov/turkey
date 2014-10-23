@@ -245,6 +245,24 @@ class DAO {
         return $country_list;
     }
 
+    public function getHouseTypes() {
+        $house_type_list = array();
+        $connection = $this->connection;
+        $sql = 'SELECT * FROM house_types ';
+        $res = $connection->query($sql);
+        if ($this->connection->connect_errno) {
+            die('Ошибка соединения'.$this->connection->error);
+        }
+        if (isset($res)) {
+            while($row = $res->fetch_assoc()) {
+                $house_type = new HouseType($row['id'], $row['name']);
+                array_push($house_type_list, $house_type);
+            }
+            $res->free();
+        }
+        return $house_type_list;
+    }
+
     public function getCitysById($id) {
         $citys = array();
         $connection = $this->connection;
