@@ -216,6 +216,21 @@ class DAO {
                         $house->setParking(true);
                     }
                 }
+                if (isset($row['sport'])) {
+                    if ($row['sport'] == 1) {
+                        $house->setSport(true);
+                    }
+                }
+                if (isset($row['kitchen'])) {
+                    if ($row['kitchen'] == 1) {
+                        $house->setKitchen(true);
+                    }
+                }
+                if (isset($row['bath'])) {
+                    if ($row['bath'] == 1) {
+                        $house->setBath(true);
+                    }
+                }
                 if (isset($row['map'])) {
                     $house->setMap($row['map']);
                 }

@@ -75,6 +75,20 @@ if (isset($_GET['maxr'])) {
     $cond .= "h.room_number<=".$_GET['maxr'];
 }
 
+if (isset($_GET['minf'])) {
+    if ($cond != "") {
+        $cond .= " and ";
+    }
+    $cond .= "h.floor_number>=".$_GET['minf'];
+}
+
+if (isset($_GET['maxf'])) {
+    if ($cond != "") {
+        $cond .= " and ";
+    }
+    $cond .= "h.floor_number<=".$_GET['maxf'];
+}
+
 if (isset($_GET['p'])) {
     if ($cond != "") {
         $cond .= " and ";
@@ -114,14 +128,21 @@ if (isset($_GET['k'])) {
     if ($cond != "") {
         $cond .= " and ";
     }
-    $cond .= "h.kitchen_range=".$_GET['k'];
+    $cond .= "h.kitchen=".$_GET['k'];
 }
 
-if (isset($_GET['m'])) {
+if (isset($_GET['sp'])) {
     if ($cond != "") {
         $cond .= " and ";
     }
-    $cond .= "h.microwave=".$_GET['m'];
+    $cond .= "h.sport=".$_GET['sp'];
+}
+
+if (isset($_GET['b'])) {
+    if ($cond != "") {
+        $cond .= " and ";
+    }
+    $cond .= "h.bath=".$_GET['b'];
 }
 
 $dao = new DAO($cond);

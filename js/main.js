@@ -60,6 +60,20 @@ $().ready(function() {
             }
             text += "maxr="+maxr;
         }
+        var minf = $("#inputFloorMin option:selected").val();
+        if (minf != 0) {
+            if (text != "") {
+                text += "&";
+            }
+            text += "minf="+minf;
+        }
+        var maxf = $("#inputFloorMax option:selected").val();
+        if (maxf != 0) {
+            if (text != "") {
+                text += "&";
+            }
+            text += "maxf="+maxf;
+        }
         if ($('#inputParking').is(":checked")) {
             if (text != "") {
                 text += "&";
@@ -90,18 +104,25 @@ $().ready(function() {
             }
             text += "r=1";
         }
-        if ($('#inputKitchenRange').is(":checked")) {
+        if ($('#inputKitchen').is(":checked")) {
             if (text != "") {
                 text += "&";
             }
             text += "k=1";
         }
-        if ($('#inputMicrowave').is(":checked")) {
+        if ($('#inputSport').is(":checked")) {
             if (text != "") {
                 text += "&";
             }
-            text += "m=1";
+            text += "sp=1";
         }
+        if ($('#inputBath').is(":checked")) {
+            if (text != "") {
+                text += "&";
+            }
+            text += "b=1";
+        }
+
         var request = "/houses.php";
         if (text != "") {
             request += "?" + text;

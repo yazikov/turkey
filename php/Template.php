@@ -279,6 +279,21 @@ class Template {
             print '<p><b>Мебель</b></p>';
         }
 
+        $kitchen = $house->getKitchen();
+        if (isset($kitchen) && $kitchen == true) {
+            print '<p><b>Встроенная кухня</b></p>';
+        }
+
+        $sport = $house->getSport();
+        if (isset($sport) && $sport == true) {
+            print '<p><b>Спортивный зал</b></p>';
+        }
+
+        $bath = $house->getBath();
+        if (isset($bath) && $bath == true) {
+            print '<p><b>Банный комплекс</b></p>';
+        }
+
         $appliances = "";
 
         $washer = $house->getWasher();
@@ -457,6 +472,19 @@ class Template {
 
         print '<p><select id="inputRoomMax" class="combobox">';
         print '<option value="0" selected>Количество комнат</option>';
+        print '<option value="1">до 1</option>';
+        print '<option value="2">до 2</option>';
+        print '<option value="3">до 3</option>';
+        print '<option value="4">до 4</option>';
+        print '<option value="5">до 5</option>';
+        print '<option value="6">до 6</option>';
+        print '<option value="7">до 7</option>';
+        print '<option value="8">до 8</option>';
+        print '<option value="9">до 9</option>';
+        print '</select></p>';
+
+        print '<p><select id="inputFloorMin" class="combobox">';
+        print '<option value="0" selected>Количество этажей</option>';
         print '<option value="1">от 1</option>';
         print '<option value="2">от 2</option>';
         print '<option value="3">от 3</option>';
@@ -468,13 +496,27 @@ class Template {
         print '<option value="9">от 9</option>';
         print '</select></p>';
 
+        print '<p><select id="inputFloorMax" class="combobox">';
+        print '<option value="0" selected>Количество этажей</option>';
+        print '<option value="1">до 1</option>';
+        print '<option value="2">до 2</option>';
+        print '<option value="3">до 3</option>';
+        print '<option value="4">до 4</option>';
+        print '<option value="5">до 5</option>';
+        print '<option value="6">до 6</option>';
+        print '<option value="7">до 7</option>';
+        print '<option value="8">до 8</option>';
+        print '<option value="9">до 9</option>';
+        print '</select></p>';
+
         print '<p><input id="inputParking" type="checkbox" /> Парковка</p>';
         print '<p><input id="inputSwimmingPool" type="checkbox" /> Бассейн</p>';
         print '<p><input id="inputFurniture" type="checkbox" /> Мебель</p>';
+        print '<p><input id="inputKitchen" type="checkbox" /> Встроенная кухная</p>';
+        print '<p><input id="inputSport" type="checkbox" /> Спортивный зал</p>';
+        print '<p><input id="inputBath" type="checkbox" /> Банный комплекс</p>';
         print '<p><input id="inputWasher" type="checkbox" /> Стиральная машина</p>';
         print '<p><input id="inputRefrigerator" type="checkbox" /> Холодильник</p>';
-        print '<p><input id="inputKitchenRange" type="checkbox" /> Кухонная плита</p>';
-        print '<p><input id="inputMicrowave" type="checkbox" /> Микроволновая печь</p>';
         print '<div class="button_left">';
         print '<button id="btnSearch" type="button" class="btn btn-default">Найти</button>';
         print '</div>';

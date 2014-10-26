@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="../../../../css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="../../../../css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="../../../../css/main.css">
+
+    <script src="../../../../js/jquery-2.1.1.min.js"></script>
+    <script src="../../../../js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="../../../../fancybox/jquery.fancybox.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" href="../../../../fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+    <!-- Add Button helper (this is optional) -->
+    <link rel="stylesheet" type="text/css" href="../../../../fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+    <script type="text/javascript" src="../../../../fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+    <!-- Add Thumbnail helper (this is optional) -->
+    <link rel="stylesheet" type="text/css" href="../../../../fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+    <script type="text/javascript" src="../../../../fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+    <!-- Add Media helper (this is optional) -->
+    <script type="text/javascript" src="../../../../fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+    <script type="text/javascript" src="../../../../js/tinymce/tinymce.min.js"></script>
+
+    <script>tinymce.init({selector:'textarea'});</script>
+
+    <script src="../../../../js/main.js"></script>
+
+    <style>
+        td, th {
+            padding: 5px !important;
+        }
+
+        .layout_center {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+    </style>
+
+    <?php
+        include("../../../../include.php");
+        $dao = new DAO(null);
+
+        $house = null;
+        if ($isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $house = $dao->getHouseById($id);
+        }
+     ?>
+</head>
+<body>
+
+
+<div class="main">
+    <div class="header">
+        <div class="logo">
+
+        </div>
+        <div class="menu_wrapper">
+            <ul class="nav navbar-nav menu">
+                <li><a href="#">ГЛАВНАЯ</a></li>
+                <li><a href="#">КАТАЛОГ</a></li>
+                <li><a href="#">УСЛУГИ</a></li>
+                <li><a href="#">СПРАВОЧНЫЕ МАТЕРИАЛЫ</a></li>
+                <li><a href="#">КОНТАКТЫ</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="layout">
+        <div class="layout_left">
+
+        </div>
+        <div class="layout_right">
+
+        </div>
+        <div class="layout_center">
+            <div class="content">
+                <div class="content_title">
+                    <b>Загрузка изображений</b>
+                </div>
+                <div class="content_body">
+                    <form action=upload.php method=post enctype=multipart/form-data>
+                        <table cellspacing="10" style="border-spacing: 10px; width: 100%;">
+                            <?php
+                                if (isset($house)) {
+
+                                } else {
+                                    print '<tr><td>id</td><td><input type="text" name="uploadfileid" disabled value="2"/></td></tr>';
+                                    print '<tr><td>Название</td><td><input type="text" name="uploadfileid"/></td></tr>';
+                                    print '<tr><td>Ключи</td><td><input type="text" name="uploadfile"/></td></tr>';
+                                    print '<tr><td>Короткое описание</td><td><textarea name="test"></textarea></td></tr>';
+                                    print '<tr><td>Полное описание</td><td><textarea></textarea></td></tr>';
+                                    print '<tr><td>id города</td><td><input type="text" name="uploadfiletext2"/></td></tr>';
+                                    print '<tr><td>id тип недвижимости</td><td><input type="text" name="uploadfile3"/></td></tr>';
+                                    print '<tr><td>Тип предложения</td><td><input type="text" name="uploadfiletext3"/></td></tr>';
+                                    print '<tr><td>Стоимость</td><td><input type="text" name="uploadfile4"/></td></tr>';
+                                    print '<tr><td>Площадь</td><td><input type="text" name="uploadfiletext4"/></td></tr>';
+                                    print '<tr><td>Близость к морю</td><td><input type="text" name="uploadfile5"/></td></tr>';
+                                    print '<tr><td>Количество комнат</td><td><input type="text" name="uploadfiletext5"/></td></tr>';
+                                    print '<tr><td>Количество этажей</td><td><input type="text" name="uploadfile6"/></td></tr>';
+                                    print '<tr><td>Этаж</td><td><input type="text" name="uploadfiletext6"/></td></tr>';
+                                    print '<tr><td>Карта</td><td><textarea></textarea></td></tr>';
+                                    print '<tr><td>Бассейн</td><td><input id="inputSwimmingPool" type="checkbox" /></td></tr>';
+                                    print '<tr><td>Парковка</td><td><input type="checkbox" /></td></tr>';
+                                    print '<tr><td>Мебель</td><td><input type="checkbox" name="uploadfiletext8"/></td></tr>';
+                                    print '<tr><td>Банный комплекс</td><td><input type="checkbox" name="uploadfile9"/></td></tr>';
+                                    print '<tr><td>Встроенная кухня</td><td><input type="checkbox" name="uploadfiletext9"/></td></tr>';
+                                    print '<tr><td>Спортивный зал</td><td><input type="checkbox" name="uploadfile10"/></td></tr>';
+                                    print '<tr><td>Стиральная машина</td><td><input type="checkbox" name="uploadfiletext10"/></td></tr>';
+                                    print '<tr><td>Холодильник</td><td><input type="checkbox" name="uploadfile11"/></td></tr>';
+                                    print '<tr><td>Кухонная плита</td><td><input type="checkbox" name="uploadfiletext11"/></td></tr>';
+                                    print '<tr><td>Микроволновая печь</td><td><input type="checkbox" name="uploadfile12"/></td></tr>';
+                                }
+                             ?>
+                        </table>
+                        <input type="submit" value="Сохранить" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -48,6 +48,9 @@ class House {
     private $refrigerator;
     private $kitchen_range;
     private $microwave;
+    private $kitchen;
+    private $sport;
+    private $bath;
     private $images;
     private $map;
 
@@ -424,6 +427,54 @@ class House {
     public function setWasher($washer)
     {
         $this->washer = $washer;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBath()
+    {
+        return $this->bath;
+    }
+
+    /**
+     * @param mixed $bath
+     */
+    public function setBath($bath)
+    {
+        $this->bath = $bath;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getKitchen()
+    {
+        return $this->kitchen;
+    }
+
+    /**
+     * @param mixed $kitchen
+     */
+    public function setKitchen($kitchen)
+    {
+        $this->kitchen = $kitchen;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSport()
+    {
+        return $this->sport;
+    }
+
+    /**
+     * @param mixed $sport
+     */
+    public function setSport($sport)
+    {
+        $this->sport = $sport;
     }
 
 
