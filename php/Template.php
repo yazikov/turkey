@@ -251,7 +251,7 @@ class Template {
 
         $room_number = $house->getRoomNumber();
         if (isset($room_number)) {
-            print '<p><b>Количество комнат: </b>'.$room_number.'</p>';
+            print '<p><b>Количество спален: </b>'.$room_number.'</p>';
         }
 
         $floor = $house->getFloor();
@@ -438,76 +438,17 @@ class Template {
         }
         print '</select></p>';
 
-        print '<p><select id="inputCostMin" class="combobox">';
-        print '<option value="0" selected>Минимальная стоимость</option>';
-        print '<option value="1000">от 1000$</option>';
-        print '<option value="10000">от 10000$</option>';
-        print '<option value="20000">от 20000$</option>';
-        print '<option value="50000">от 50000$</option>';
-        print '<option value="100000">от 100000$</option>';
-        print '</select></p>';
+        print '<p>Стоимость</p>';
+        print '<p>От <input id="inputCostMin" type="text" class="search_menu_input" value="0"/>';
+        print ' До <input id="inputCostMax" type="text"  class="search_menu_input" value="0"/></p>';
 
-        print '<p><select id="inputCostMax" class="combobox">';
-        print '<option value="0" selected>Максимальная стоимость</option>';
-        print '<option value="1000">до 1000$</option>';
-        print '<option value="10000">до 10000$</option>';
-        print '<option value="20000">до 20000$</option>';
-        print '<option value="50000">до 50000$</option>';
-        print '<option value="100000">до 100000$</option>';
-        print '</select></p>';
+        print '<p>Количество спален</p>';
+        print '<p>От <input id="inputRoomMin" type="text" class="search_menu_input" value="0"/>';
+        print ' До <input id="inputRoomMax" type="text"  class="search_menu_input" value="0"/></p>';
 
-
-        print '<p><select id="inputRoomMin" class="combobox">';
-        print '<option value="0" selected>Количество комнат</option>';
-        print '<option value="1">от 1</option>';
-        print '<option value="2">от 2</option>';
-        print '<option value="3">от 3</option>';
-        print '<option value="4">от 4</option>';
-        print '<option value="5">от 5</option>';
-        print '<option value="6">от 6</option>';
-        print '<option value="7">от 7</option>';
-        print '<option value="8">от 8</option>';
-        print '<option value="9">от 9</option>';
-        print '</select></p>';
-
-        print '<p><select id="inputRoomMax" class="combobox">';
-        print '<option value="0" selected>Количество комнат</option>';
-        print '<option value="1">до 1</option>';
-        print '<option value="2">до 2</option>';
-        print '<option value="3">до 3</option>';
-        print '<option value="4">до 4</option>';
-        print '<option value="5">до 5</option>';
-        print '<option value="6">до 6</option>';
-        print '<option value="7">до 7</option>';
-        print '<option value="8">до 8</option>';
-        print '<option value="9">до 9</option>';
-        print '</select></p>';
-
-        print '<p><select id="inputFloorMin" class="combobox">';
-        print '<option value="0" selected>Количество этажей</option>';
-        print '<option value="1">от 1</option>';
-        print '<option value="2">от 2</option>';
-        print '<option value="3">от 3</option>';
-        print '<option value="4">от 4</option>';
-        print '<option value="5">от 5</option>';
-        print '<option value="6">от 6</option>';
-        print '<option value="7">от 7</option>';
-        print '<option value="8">от 8</option>';
-        print '<option value="9">от 9</option>';
-        print '</select></p>';
-
-        print '<p><select id="inputFloorMax" class="combobox">';
-        print '<option value="0" selected>Количество этажей</option>';
-        print '<option value="1">до 1</option>';
-        print '<option value="2">до 2</option>';
-        print '<option value="3">до 3</option>';
-        print '<option value="4">до 4</option>';
-        print '<option value="5">до 5</option>';
-        print '<option value="6">до 6</option>';
-        print '<option value="7">до 7</option>';
-        print '<option value="8">до 8</option>';
-        print '<option value="9">до 9</option>';
-        print '</select></p>';
+        print '<p>Количество этажей</p>';
+        print '<p>От <input id="inputFloorMin" type="text" class="search_menu_input" value="0"/>';
+        print ' До <input id="inputFloorMax" type="text"  class="search_menu_input" value="0"/></p>';
 
         print '<p><input id="inputParking" type="checkbox" /> Парковка</p>';
         print '<p><input id="inputSwimmingPool" type="checkbox" /> Бассейн</p>';

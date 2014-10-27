@@ -187,3 +187,41 @@ html, body {
 .combobox {
     width: 200px;
 }
+
+.search_menu_input {
+    width: 80px;
+}
+
+.menu_table {
+    width: 100%;
+}
+
+.menu_table tr {
+    width: 100%;
+}
+
+.menu_table td {
+    width: 100%;
+    padding: 10px;
+}
+
+.menu_table td img {
+    float: left;
+}
+
+.menu_table td a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.menu_table_text {
+    font-size: 20px;
+    height: 100px;
+    display: table;
+    margin-left: 115px;
+}
+
+.menu_table_text span {
+    display: table-cell;
+    vertical-align: middle;
+}

@@ -32,47 +32,47 @@ $().ready(function() {
             }
             text += "htype="+houseType;
         }
-        var minc = $("#inputCostMin option:selected").val();
+        var minc = $("#inputCostMin").val();
         if (minc != 0) {
             if (text != "") {
                 text += "&";
             }
             text += "minc="+minc;
         }
-        var maxc = $("#inputCostMax option:selected").val();
+        var maxc = $("#inputCostMax").val();
         if (maxc != 0) {
             if (text != "") {
                 text += "&";
             }
             text += "maxc="+maxc;
         }
-        var minr = $("#inputRoomMin option:selected").val();
+        var minr = $("#inputRoomMin").val();
         if (minr != 0) {
             if (text != "") {
                 text += "&";
             }
             text += "minr="+minr;
         }
-        var maxr = $("#inputRoomMax option:selected").val();
+        var maxr = $("#inputRoomMax").val();
         if (maxr != 0) {
             if (text != "") {
                 text += "&";
             }
             text += "maxr="+maxr;
         }
-        var minf = $("#inputFloorMin option:selected").val();
+        var minf = $("#inputFloorMin").val();
         if (minf != 0) {
             if (text != "") {
                 text += "&";
             }
             text += "minf="+minf;
         }
-        var maxf = $("#inputFloorMax option:selected").val();
-        if (maxf != 0) {
+        var minf = $("#inputFloorMax").val();
+        if (minf != 0) {
             if (text != "") {
                 text += "&";
             }
-            text += "maxf="+maxf;
+            text += "maxf="+minf;
         }
         if ($('#inputParking').is(":checked")) {
             if (text != "") {
