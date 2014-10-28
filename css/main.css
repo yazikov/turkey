@@ -221,6 +221,12 @@ html, body {
     margin-left: 115px;
 }
 
+.menu_table_img {
+    float: left;
+    height: 100px;
+    width: 100px;
+}
+
 .menu_table_text span {
     display: table-cell;
     vertical-align: middle;
